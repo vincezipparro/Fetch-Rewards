@@ -5,7 +5,7 @@ describe 'Fetch Rewards Challenge' do
     visit 'http://ec2-54-208-152-154.compute-1.amazonaws.com/'
   end
 
-  it 'should do a task' do
+  it 'should find a fake gold bar' do
     numbers = all(:xpath, '/html[1]/body[1]/div[1]/div[1]/div[2]/button')
     numbers_array = []
 
@@ -33,11 +33,10 @@ describe 'Fetch Rewards Challenge' do
 
       if comparison.include?('<')
         start += 1
-        puts 'found it'
+        puts '------------------------------------'
         puts comparison
         sequence = sequence[0..3]
-
-        puts '--------------------------------------------------'
+        puts '------------------------------------'
 
         find(:xpath, "//input[@id='left_0']").set(sequence[0])
         find(:xpath, "//input[@id='left_1']").set(sequence[1])
@@ -46,21 +45,23 @@ describe 'Fetch Rewards Challenge' do
         find(:xpath, "//button[@id='weigh']").click
         sleep 2
         find(:xpath, "//button[contains(text(),'Reset')]").click
+
         comparison = find(:xpath, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
+
         if comparison.include?('<')
           start += 1
-          puts 'found it'
           puts comparison
-          puts '--------------------------------------------------'
+          puts '------------------------------------'
 
           find(:xpath, "//input[@id='left_0']").set(sequence[0])
           find(:xpath, "//input[@id='right_0']").set(sequence[1])
           find(:xpath, "//button[@id='weigh']").click
           sleep 2
           find(:xpath, "//button[contains(text(),'Reset')]").click
+
           comparison = find(:xpath, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
-          puts 'found it'
           puts comparison
+
           if comparison.include?('<')
             find(:xpath, "//button[@id='coin_#{sequence[0]}']").click
             alert_message = page.driver.browser.switch_to.alert.text
@@ -75,8 +76,7 @@ describe 'Fetch Rewards Challenge' do
           break
         elsif comparison.include?('>')
           start += 1
-          puts 'found it'
-          #   puts sequence[2..3]
+
           puts comparison
           sequence = sequence[2..3]
           puts '------------------------------------'
@@ -86,8 +86,8 @@ describe 'Fetch Rewards Challenge' do
           find(:xpath, "//button[@id='weigh']").click
           sleep 2
           find(:xpath, "//button[contains(text(),'Reset')]").click
+
           comparison = find(:xpath, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
-          puts 'found it'
           puts comparison
 
           if comparison.include?('>')
@@ -105,11 +105,10 @@ describe 'Fetch Rewards Challenge' do
         end
       elsif comparison.include?('>')
         start += 1
-        puts 'found it'
+        puts '------------------------------------'
         puts comparison
         sequence = sequence[4..7]
-
-        puts '--------------------------------------------------'
+        puts '------------------------------------'
 
         find(:xpath, "//button[contains(text(),'Reset')]").click
         find(:xpath, "//input[@id='left_0']").set(sequence[0])
@@ -123,9 +122,7 @@ describe 'Fetch Rewards Challenge' do
         comparison = find(:xpath, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
         if comparison.include?('<')
           start += 1
-          puts 'found it'
           puts comparison
-
           puts '------------------------------------'
 
           find(:xpath, "//input[@id='left_0']").set(sequence[0])
@@ -133,8 +130,8 @@ describe 'Fetch Rewards Challenge' do
           find(:xpath, "//button[@id='weigh']").click
           sleep 2
           find(:xpath, "//button[contains(text(),'Reset')]").click
+
           comparison = find(:xpath, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
-          puts 'found it'
           puts comparison
 
           if comparison.include?('<')
@@ -151,8 +148,6 @@ describe 'Fetch Rewards Challenge' do
           break
         elsif comparison.include?('>')
           start += 1
-          puts 'found it'
-
           puts comparison
           puts '------------------------------------'
           sequence = sequence[2..3]
@@ -162,8 +157,8 @@ describe 'Fetch Rewards Challenge' do
           find(:xpath, "//button[@id='weigh']").click
           sleep 2
           find(:xpath, "//button[contains(text(),'Reset')]").click
+
           comparison = find(:xpath, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
-          puts 'found it'
           puts comparison
 
           if comparison.include?('>')
