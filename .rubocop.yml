@@ -1,0 +1,44 @@
+Style/GlobalVars:
+  Description: 'Do not introduce global variables.'
+  StyleGuide: '#instance-vars'
+  Reference: 'https://www.zenspider.com/ruby/quickref.html'
+  Enabled: false
+  VersionAdded: '0.13'
+  # Built-in global variables are allowed by default.
+  AllowedVariables: []
+
+AllCops:
+    NewCops: disable
+# we'll want to at least some of these as we continue to improve this project
+Layout/LineLength:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/ModuleLength:
+  Enabled: false
+Documentation:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Naming/FileName:
+  Enabled: false
+Naming/VariableNumber:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Metrics/ParameterLists:
+  Max: 6
+  MaxOptionalParameters: 6
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/NumericLiterals:
+  Enabled: false
+Layout/HashAlignment:
+  Enabled: false
+Layout/ArgumentAlignment:
+  Enabled: false
+Style/OneLineConditional:
+  Enabled: false
+Style/Next:
+  Enabled: false
+

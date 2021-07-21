@@ -1,0 +1,14 @@
+--format json
+--out rspec_results.json
+
+--format html
+--out rspec_results.html
+
+--format documentation
+--colour
+--out rspec_results.log
+
+--format documentation
+--colour
+
+--require spec_helper
