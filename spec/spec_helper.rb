@@ -1,5 +1,3 @@
-ENV['RAILS_ENV'] ||= 'test'
-# ENV['DT_ENV']    ||= 'test' # Set this to which ever evn you want to use when debugging
 require File.expand_path('../config/environment', __dir__)
 require File.expand_path('../config/dt_env.rb', File.dirname(__FILE__))
 require 'rspec/rails'
@@ -78,7 +76,6 @@ Capybara.register_driver :selenium_chrome_headless do |app|
 end
 
 RSpec.configure do |config|
-
   config.include ERB::Util
   config.include Capybara::DSL
   config.infer_base_class_for_anonymous_controllers = false
