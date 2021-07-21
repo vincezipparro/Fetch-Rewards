@@ -17,8 +17,6 @@ describe 'Fetch Rewards Challenge' do
 
     start = 1
     combinations.each do |sequence|
-      # puts "#{sequence[0]},#{sequence[1]},#{sequence[2]},#{sequence[3]}"
-
       find(:xpath, "//input[@id='left_0']").set(sequence[0])
       find(:xpath, "//input[@id='left_1']").set(sequence[1])
       find(:xpath, "//input[@id='left_2']").set(sequence[2])
@@ -38,8 +36,9 @@ describe 'Fetch Rewards Challenge' do
         puts 'found it'
         puts comparison
         sequence = sequence[0..3]
-        puts sequence
+
         puts '--------------------------------------------------'
+
         find(:xpath, "//input[@id='left_0']").set(sequence[0])
         find(:xpath, "//input[@id='left_1']").set(sequence[1])
         find(:xpath, "//input[@id='right_0']").set(sequence[2])
@@ -52,7 +51,6 @@ describe 'Fetch Rewards Challenge' do
           start += 1
           puts 'found it'
           puts comparison
-          puts sequence[0..1]
           puts '--------------------------------------------------'
 
           find(:xpath, "//input[@id='left_0']").set(sequence[0])
@@ -65,14 +63,20 @@ describe 'Fetch Rewards Challenge' do
           puts comparison
           if comparison.include?('<')
             find(:xpath, "//button[@id='coin_#{sequence[0]}']").click
+            alert_message = page.driver.browser.switch_to.alert.text
+            puts alert_message
+            puts "The fake bar is #{sequence[0]}"
           else
             find(:xpath, "//button[@id='coin_#{sequence[1]}']").click
+            alert_message = page.driver.browser.switch_to.alert.text
+            puts alert_message
+            puts "The fake bar is #{sequence[1]}"
           end
           break
         elsif comparison.include?('>')
           start += 1
           puts 'found it'
-          puts sequence[2..3]
+          #   puts sequence[2..3]
           puts comparison
           sequence = sequence[2..3]
           puts '------------------------------------'
@@ -88,8 +92,14 @@ describe 'Fetch Rewards Challenge' do
 
           if comparison.include?('>')
             find(:xpath, "//button[@id='coin_#{sequence[1]}']").click
+            alert_message = page.driver.browser.switch_to.alert.text
+            puts alert_message
+            puts "The fake bar is #{sequence[1]}"
           else
             find(:xpath, "//button[@id='coin_#{sequence[0]}']").click
+            alert_message = page.driver.browser.switch_to.alert.text
+            puts alert_message
+            puts "The fake bar is #{sequence[0]}"
           end
           break
         end
@@ -98,10 +108,10 @@ describe 'Fetch Rewards Challenge' do
         puts 'found it'
         puts comparison
         sequence = sequence[4..7]
-        puts sequence
-        # break
+
+        puts '--------------------------------------------------'
+
         find(:xpath, "//button[contains(text(),'Reset')]").click
-        # puts '--------------------------------------------------'
         find(:xpath, "//input[@id='left_0']").set(sequence[0])
         find(:xpath, "//input[@id='left_1']").set(sequence[1])
         find(:xpath, "//input[@id='right_0']").set(sequence[2])
@@ -115,7 +125,7 @@ describe 'Fetch Rewards Challenge' do
           start += 1
           puts 'found it'
           puts comparison
-          sequence = sequence[0..1]
+
           puts '------------------------------------'
 
           find(:xpath, "//input[@id='left_0']").set(sequence[0])
@@ -129,14 +139,20 @@ describe 'Fetch Rewards Challenge' do
 
           if comparison.include?('<')
             find(:xpath, "//button[@id='coin_#{sequence[0]}']").click
+            alert_message = page.driver.browser.switch_to.alert.text
+            puts alert_message
+            puts "The fake bar is #{sequence[0]}"
           else
             find(:xpath, "//button[@id='coin_#{sequence[1]}']").click
+            alert_message = page.driver.browser.switch_to.alert.text
+            puts alert_message
+            puts "The fake bar is #{sequence[1]}"
           end
           break
         elsif comparison.include?('>')
           start += 1
           puts 'found it'
-          puts sequence[6..7]
+
           puts comparison
           puts '------------------------------------'
           sequence = sequence[2..3]
@@ -152,26 +168,33 @@ describe 'Fetch Rewards Challenge' do
 
           if comparison.include?('>')
             find(:xpath, "//button[@id='coin_#{sequence[1]}']").click
+            alert_message = page.driver.browser.switch_to.alert.text
+            puts alert_message
+            puts "The fake bar is #{sequence[1]}"
           else
             find(:xpath, "//button[@id='coin_#{sequence[0]}']").click
+            alert_message = page.driver.browser.switch_to.alert.text
+            puts alert_message
+            puts "The fake bar is #{sequence[0]}"
           end
           break
         end
       else
-        # comparison.include?('=')
-        # elsif comparison.include?('=')
+        puts comparison
         array_sum = sequence[0..7]
         array_sum = array_sum.sum
         puts array_sum
 
         fake_bar = 36 - array_sum
-        puts "fake bar = #{fake_bar}"
-        # 36 mimnus combination
+
         find(:xpath, "//button[@id='coin_#{fake_bar}']").click
+        alert_message = page.driver.browser.switch_to.alert.text
+
+        puts alert_message
+        puts "The fake bar is #{fake_bar}"
         break
       end
       start += 1
     end
-    sleep 30
   end
 end
