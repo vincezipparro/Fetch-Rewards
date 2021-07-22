@@ -194,7 +194,6 @@ describe 'Fetch Rewards Challenge' do
         puts comparison
         array_sum = sequence[0..7]
         array_sum = array_sum.sum
-        puts array_sum
         fake_bar = 36 - array_sum
 
         find(:xpath, "//button[@id='coin_#{fake_bar}']").click
