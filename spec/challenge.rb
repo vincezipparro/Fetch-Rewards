@@ -65,12 +65,14 @@ describe 'Fetch Rewards Challenge' do
           if comparison.include?('<')
             find(:xpath, "//button[@id='coin_#{sequence[0]}']").click
             alert_message = page.driver.browser.switch_to.alert.text
+            expect(alert_message).to eq 'Yay! You find it!'
             puts '------------------------------------'
             puts alert_message
             puts "The fake bar is #{sequence[0]}"
           else
             find(:xpath, "//button[@id='coin_#{sequence[1]}']").click
             alert_message = page.driver.browser.switch_to.alert.text
+            expect(alert_message).to eq 'Yay! You find it!'
             puts '------------------------------------'
             puts alert_message
             puts "The fake bar is #{sequence[1]}"
@@ -95,12 +97,14 @@ describe 'Fetch Rewards Challenge' do
           if comparison.include?('>')
             find(:xpath, "//button[@id='coin_#{sequence[1]}']").click
             alert_message = page.driver.browser.switch_to.alert.text
+            expect(alert_message).to eq 'Yay! You find it!'
             puts '------------------------------------'
             puts alert_message
             puts "The fake bar is #{sequence[1]}"
           else
             find(:xpath, "//button[@id='coin_#{sequence[0]}']").click
             alert_message = page.driver.browser.switch_to.alert.text
+            expect(alert_message).to eq 'Yay! You find it!'
             puts '------------------------------------'
             puts alert_message
             puts "The fake bar is #{sequence[0]}"
@@ -141,12 +145,14 @@ describe 'Fetch Rewards Challenge' do
           if comparison.include?('<')
             find(:xpath, "//button[@id='coin_#{sequence[0]}']").click
             alert_message = page.driver.browser.switch_to.alert.text
+            expect(alert_message).to eq 'Yay! You find it!'
             puts '------------------------------------'
             puts alert_message
             puts "The fake bar is #{sequence[0]}"
           else
             find(:xpath, "//button[@id='coin_#{sequence[1]}']").click
             alert_message = page.driver.browser.switch_to.alert.text
+            expect(alert_message).to eq 'Yay! You find it!'
             puts '------------------------------------'
             puts alert_message
             puts "The fake bar is #{sequence[1]}"
@@ -170,12 +176,14 @@ describe 'Fetch Rewards Challenge' do
           if comparison.include?('>')
             find(:xpath, "//button[@id='coin_#{sequence[1]}']").click
             alert_message = page.driver.browser.switch_to.alert.text
+            expect(alert_message).to eq 'Yay! You find it!'
             puts '------------------------------------'
             puts alert_message
             puts "The fake bar is #{sequence[1]}"
           else
             find(:xpath, "//button[@id='coin_#{sequence[0]}']").click
             alert_message = page.driver.browser.switch_to.alert.text
+            expect(alert_message).to eq 'Yay! You find it!'
             puts '------------------------------------'
             puts alert_message
             puts "The fake bar is #{sequence[0]}"
@@ -191,6 +199,7 @@ describe 'Fetch Rewards Challenge' do
 
         find(:xpath, "//button[@id='coin_#{fake_bar}']").click
         alert_message = page.driver.browser.switch_to.alert.text
+        expect(alert_message).to eq 'Yay! You find it!'
         puts '------------------------------------'
         puts alert_message
         puts "The fake bar is #{fake_bar}"
