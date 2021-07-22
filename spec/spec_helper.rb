@@ -23,7 +23,7 @@ Capybara.javascript_driver = :selenium
 Capybara.default_driver = :selenium_chrome_headless
 # Capybara.default_driver = :firefox_headless
 Capybara.ignore_hidden_elements = true
-Capybara.default_max_wait_time = 38
+Capybara.default_max_wait_time = 15
 
 # firefox
 Capybara.register_driver :firefox_headless do |app|
@@ -93,7 +93,7 @@ RSpec.configure do |config|
 
   # seconds to wait between retries
   config.default_sleep_interval = 1
-  config.default_retry_count = 2
+  config.default_retry_count = 1
 
   # cookie testing
   ShowMeTheCookies.register_adapter(:selenium_chrome_headless, ShowMeTheCookies::Selenium)
