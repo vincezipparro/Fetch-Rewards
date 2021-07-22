@@ -1,9 +1,9 @@
 # Fetch Rewards Coding Exercise
 
 - Clone repo to desktop
-- Open folder in VS Code/Other IDE
-- Via the terminal `cd` into the folder path
-- Run `gem install bundler`
+- Open folder in VS Code/Other IDE(optional)
+- Open/In your terminal `cd` into the folder path of cloned repo
+- Run `gem install bundler` or possibly `sudo gem install bundler`
 - Run `bundle install`
 - Run `DT_ENV=test bundle exec rspec spec/challenge.rb`  
 
