@@ -282,126 +282,12 @@ a {
 <div id="div_group_1" class="example_group passed">
   <dl style="margin-left: 0px;">
   <dt id="example_group_1" class="passed">Fetch Rewards Challenge</dt>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_1');</script>
-    <script type="text/javascript">makeRed('example_group_1');</script>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">should find a fake gold bar</span>
-      <span class="duration">5.19181s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>  Got 0 failures and 2 other errors:
-
-  1) Failure/Error: [0mfind([33m:xpath[0m, [31m[1;31m&quot;[0m[31m//button[contains(text(),&#39;Reset&#39;)][1;31m&quot;[0m[31m[0m).click
-
-     Selenium::WebDriver::Error::NoSuchWindowError:
-       no such window: window was already closed
-         (Session info: chrome=91.0.4472.164)
-     # 0   chromedriver                        0x000000010d7c9649 chromedriver + 2741833
-     # 1   chromedriver                        0x000000010de7ffb3 chromedriver + 9781171
-     # 2   chromedriver                        0x000000010d556308 chromedriver + 172808
-     # 3   chromedriver                        0x000000010d5463ad chromedriver + 107437
-     # 4   chromedriver                        0x000000010d547782 chromedriver + 112514
-     # 5   chromedriver                        0x000000010d5405d2 chromedriver + 83410
-     # 6   chromedriver                        0x000000010d557773 chromedriver + 178035
-     # 7   chromedriver                        0x000000010d5b857c chromedriver + 574844
-     # 8   chromedriver                        0x000000010d5a7863 chromedriver + 505955
-     # 9   chromedriver                        0x000000010d57def1 chromedriver + 335601
-     # 10  chromedriver                        0x000000010d57f125 chromedriver + 340261
-     # 11  chromedriver                        0x000000010d79075c chromedriver + 2508636
-     # 12  chromedriver                        0x000000010d7a3686 chromedriver + 2586246
-     # 13  chromedriver                        0x000000010d775b51 chromedriver + 2399057
-     # 14  chromedriver                        0x000000010d7a4a5f chromedriver + 2591327
-     # 15  chromedriver                        0x000000010d7866ec chromedriver + 2467564
-     # 16  chromedriver                        0x000000010d7be2d8 chromedriver + 2695896
-     # 17  chromedriver                        0x000000010d7be46b chromedriver + 2696299
-     # 18  chromedriver                        0x000000010d7ce558 chromedriver + 2762072
-     # 19  libsystem_pthread.dylib             0x00007fff203c78fc _pthread_start + 224
-     # 20  libsystem_pthread.dylib             0x00007fff203c3443 thread_start + 15
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:72:in `assert_ok&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:34:in `initialize&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `new&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `create_response&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/default.rb:114:in `request&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:64:in `call&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:167:in `execute&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:567:in `execute&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:558:in `find_elements_by&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/search_context.rb:80:in `find_elements&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/selenium/extensions/find.rb:17:in `find_by&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/selenium/extensions/find.rb:7:in `find_xpath&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/node/base.rb:116:in `find_xpath&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/queries/selector_query.rb:249:in `find_nodes_by_selector_format&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/queries/selector_query.rb:158:in `block in resolve_for&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/node/base.rb:77:in `synchronize&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/queries/selector_query.rb:157:in `resolve_for&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/node/finders.rb:294:in `block in synced_resolve&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/node/base.rb:83:in `synchronize&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/node/finders.rb:292:in `synced_resolve&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/node/finders.rb:53:in `find&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/session.rb:768:in `block (2 levels) in &lt;class:Session&gt;&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/dsl.rb:58:in `block (2 levels) in &lt;module:DSL&gt;&#39;
-     # ./spec/challenge.rb:30:in `block (3 levels) in &lt;top (required)&gt;&#39;
-     # ./spec/challenge.rb:19:in `each&#39;
-     # ./spec/challenge.rb:19:in `block (2 levels) in &lt;top (required)&gt;&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup&#39;
-
-  2) Failure/Error: Unable to infer file and line number from backtrace
-
-     Selenium::WebDriver::Error::InvalidArgumentError:
-       invalid argument: &#39;handle&#39; must be a string
-         (Session info: chrome=91.0.4472.164)
-     # 0   chromedriver                        0x000000010d7c9649 chromedriver + 2741833
-     # 1   chromedriver                        0x000000010de7ffb3 chromedriver + 9781171
-     # 2   chromedriver                        0x000000010d556308 chromedriver + 172808
-     # 3   chromedriver                        0x000000010d5af312 chromedriver + 537362
-     # 4   chromedriver                        0x000000010d5a74f8 chromedriver + 505080
-     # 5   chromedriver                        0x000000010d57def1 chromedriver + 335601
-     # 6   chromedriver                        0x000000010d57f125 chromedriver + 340261
-     # 7   chromedriver                        0x000000010d79075c chromedriver + 2508636
-     # 8   chromedriver                        0x000000010d7a3686 chromedriver + 2586246
-     # 9   chromedriver                        0x000000010d775b51 chromedriver + 2399057
-     # 10  chromedriver                        0x000000010d7a4a5f chromedriver + 2591327
-     # 11  chromedriver                        0x000000010d7866ec chromedriver + 2467564
-     # 12  chromedriver                        0x000000010d7be2d8 chromedriver + 2695896
-     # 13  chromedriver                        0x000000010d7be46b chromedriver + 2696299
-     # 14  chromedriver                        0x000000010d7ce558 chromedriver + 2762072
-     # 15  libsystem_pthread.dylib             0x00007fff203c78fc _pthread_start + 224
-     # 16  libsystem_pthread.dylib             0x00007fff203c3443 thread_start + 15
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:72:in `assert_ok&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:34:in `initialize&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `new&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `create_response&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/default.rb:114:in `request&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:64:in `call&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:167:in `execute&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:567:in `execute&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/w3c/bridge.rb:136:in `switch_to_window&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/target_locator.rb:80:in `window&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/selenium/driver.rb:244:in `switch_to_window&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/selenium/driver_specializations/chrome_driver.rb:40:in `reset!&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/session.rb:130:in `reset!&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara.rb:325:in `block in reset_sessions!&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara.rb:325:in `reverse_each&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara.rb:325:in `reset_sessions!&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/capybara-3.34.0/lib/capybara/rspec.rb:20:in `block (2 levels) in &lt;top (required)&gt;&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:124:in `block in run&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `loop&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:110:in `run&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/rspec-retry-0.6.2/lib/rspec_ext/rspec_ext.rb:12:in `run_with_retry&#39;
-     # /Library/Ruby/Gems/2.6.0/gems/rspec-retry-0.6.2/lib/rspec/retry.rb:37:in `block (2 levels) in setup&#39;</pre></div>
-        <div class="backtrace"><pre></pre></div>
-    <pre class="ruby"><code><span class="linenum">-1</span><span class="comment"># Couldn't get snippet for </span></code></pre>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">should find a fake gold bar</span><span class='duration'>10.07467s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>5.24500 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "1 example, 1 failure";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>10.07644 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "1 example, 0 failures";</script>
 </div>
 </div>
 </body>
