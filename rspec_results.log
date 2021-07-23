@@ -5,8 +5,8 @@ Run options:
 All examples were filtered out; ignoring {:focus=>true}
 
 Fetch Rewards Challenge
-[32m  should do a task[0m
+[32m  should find a fake gold bar[0m
 
-Finished in 9.79 seconds (files took 3.36 seconds to load)
+Finished in 9.85 seconds (files took 1.83 seconds to load)
 [32m1 example, 0 failures[0m
 

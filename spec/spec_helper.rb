@@ -7,10 +7,8 @@ require 'qt_plugin_messages_suppressed'
 require 'download_helper'
 require 'capybara-screenshot/rspec'
 require 'rspec/retry'
-require 'airborne'
 require 'nokogiri'
 require 'open-uri'
-require 'twilio-ruby'
 require 'webdrivers'
 require 'pry'
 require 'pry-nav'
@@ -94,10 +92,6 @@ RSpec.configure do |config|
   # seconds to wait between retries
   config.default_sleep_interval = 1
   config.default_retry_count = 1
-
-  # cookie testing
-  ShowMeTheCookies.register_adapter(:selenium_chrome_headless, ShowMeTheCookies::Selenium)
-  config.include ShowMeTheCookies, type: :feature
 end
 
 # screenshot support for headless chrome driver

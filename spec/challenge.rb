@@ -6,7 +6,7 @@ describe 'Fetch Rewards Challenge' do
   end
 
   it 'should find a fake gold bar' do
-    numbers = all(:xpath, '/html[1]/body[1]/div[1]/div[1]/div[2]/button')
+    numbers = all(:xpath, '//body[1]/div[1]/div[1]/div[2]/button')
     numbers_array = []
 
     numbers.each do |number|
