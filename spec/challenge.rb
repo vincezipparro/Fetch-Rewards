@@ -29,7 +29,7 @@ describe 'Fetch Rewards Challenge' do
       sleep 2
       find(:xpath, "//button[contains(text(),'Reset')]").click
 
-      comparison = find(:xpath, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
+      comparison = find(:xpath, "//div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
 
       if comparison.include?('<')
         start += 1
@@ -46,7 +46,7 @@ describe 'Fetch Rewards Challenge' do
         sleep 2
         find(:xpath, "//button[contains(text(),'Reset')]").click
 
-        comparison = find(:xpath, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
+        comparison = find(:xpath, "//div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
 
         if comparison.include?('<')
           start += 1
@@ -59,7 +59,7 @@ describe 'Fetch Rewards Challenge' do
           sleep 2
           find(:xpath, "//button[contains(text(),'Reset')]").click
 
-          comparison = find(:xpath, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
+          comparison = find(:xpath, "//div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
           puts comparison
 
           if comparison.include?('<')
@@ -91,7 +91,7 @@ describe 'Fetch Rewards Challenge' do
           sleep 2
           find(:xpath, "//button[contains(text(),'Reset')]").click
 
-          comparison = find(:xpath, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
+          comparison = find(:xpath, "//div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
           puts comparison
 
           if comparison.include?('>')
@@ -127,7 +127,7 @@ describe 'Fetch Rewards Challenge' do
 
         sleep 2
         find(:xpath, "//button[contains(text(),'Reset')]").click
-        comparison = find(:xpath, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
+        comparison = find(:xpath, "//div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
         if comparison.include?('<')
           start += 1
           puts comparison
@@ -139,7 +139,7 @@ describe 'Fetch Rewards Challenge' do
           sleep 2
           find(:xpath, "//button[contains(text(),'Reset')]").click
 
-          comparison = find(:xpath, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
+          comparison = find(:xpath, "//div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
           puts comparison
 
           if comparison.include?('<')
@@ -170,7 +170,7 @@ describe 'Fetch Rewards Challenge' do
           sleep 2
           find(:xpath, "//button[contains(text(),'Reset')]").click
 
-          comparison = find(:xpath, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
+          comparison = find(:xpath, "//div[1]/div[1]/div[5]/ol[1]/li[#{start}]").text
           puts comparison
 
           if comparison.include?('>')
