@@ -194,7 +194,7 @@ describe 'Fetch Rewards Challenge' do
         puts comparison
         array_sum = sequence[0..7]
         fake_bar = 36 - array_sum.sum
-        
+
         find(:xpath, "//button[@id='coin_#{fake_bar}']").click
         alert_message = page.driver.browser.switch_to.alert.text
         expect(alert_message).to eq 'Yay! You find it!'
