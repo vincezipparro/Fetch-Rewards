@@ -9,7 +9,7 @@
 - View results in terminal!
 
 -----------------------------------------------------------------------
-Create the selenium based project using any preferable language to perform
+Create the selenium based project using any preferable language to perform:
 - clicks on buttons (“Weigh”, “Reset”)
 - Getting the measure results (field between “bowls”)
 - filling out the bowls grids with bar numbers (0 to 8)
