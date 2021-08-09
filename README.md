@@ -5,7 +5,7 @@
 - Open/In your terminal `cd` into the folder path of cloned repo
 - Run `gem install bundler` or possibly `sudo gem install bundler`
 - Run `bundle install`
-- Run `DT_ENV=test bundle exec rspec spec/challenge.rb`  
+- Run `bundle exec rspec spec/challenge.rb`  
 - View results in terminal!
 
 -----------------------------------------------------------------------
